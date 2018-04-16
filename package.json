@@ -1,20 +1,16 @@
 {
   "name": "@three11/accordion",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Front-end Accordion widget using max-height",
   "main": "dist/index.js",
   "scripts": {
-    "build": "babel src -d dist"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/three11/accordion.git"
   },
-  "keywords": [
-    "Accordion",
-    "Widget",
-    "Front-End"
-  ],
+  "keywords": ["Accordion", "Widget", "Front-End"],
   "authors": [
     {
       "name": "Three 11 Ltd",
@@ -38,9 +34,13 @@
   },
   "homepage": "https://github.com/three11/accordion#readme",
   "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.42",
-    "@babel/core": "^7.0.0-beta.42",
-    "@babel/preset-env": "^7.0.0-beta.42",
-    "@babel/preset-stage-2": "^7.0.0-beta.42"
+    "@babel/cli": "^7.0.0-beta.44",
+    "@babel/core": "^7.0.0-beta.44",
+    "@babel/preset-env": "^7.0.0-beta.44",
+    "@babel/preset-stage-2": "^7.0.0-beta.44",
+    "babel-loader": "^8.0.0-beta",
+    "unminified-webpack-plugin": "^2.0.0",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14"
   }
 }

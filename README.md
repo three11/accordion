@@ -14,6 +14,16 @@ or
 yarn add @three11/accordion
 ```
 
+or
+
+Just download this repository and link the files located in dist folder:
+
+```
+<link rel="stylesheet" href="dist/index.css" type="text/css" media="all" />
+
+<script src="dist/index.min.js"></script>
+```
+
 ## Usage
 
 First, `import` the module:
