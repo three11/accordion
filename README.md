@@ -1,3 +1,5 @@
+[![npm](https://img.shields.io/npm/dt/@three11/accordion.svg)](https://www.npmjs.com/package/@three11/accordion)
+
 # Accordion
 
 Front-end accordion widget using max-height written in vanilla ES2017
