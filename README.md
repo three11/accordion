@@ -4,6 +4,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/three11/accordion.svg)](https://github.com/three11/accordion/issues)
 [![GitHub last commit](https://img.shields.io/github/last-commit/three11/accordion.svg)](https://github.com/three11/accordion/commits/master)
 [![Github file size](https://img.shields.io/github/size/three11/accordion/dist/index.min.js.svg)](https://github.com/three11/accordion/)
+[![Build Status](https://travis-ci.org/three11/accordion.svg?branch=master)](https://travis-ci.org/three11/accordion)
 [![npm](https://img.shields.io/npm/dt/@three11/accordion.svg)](https://www.npmjs.com/package/@three11/accordion)
 [![npm](https://img.shields.io/npm/v/@three11/accordion.svg)](https://www.npmjs.com/package/@three11/accordion)
 [![license](https://img.shields.io/github/license/three11/accordion.svg)](https://github.com/three11/accordion)
@@ -51,7 +52,7 @@ Then initialize a new instance of the module:
 
 ```javascript
 const el = doc.querySelector('[data-accordion]');
-const accordion = new Accordion(el, settings = {});
+const accordion = new Accordion(el, (settings = {}));
 ```
 
 ## Settings
