@@ -1,8 +1,8 @@
 {
   "name": "@three11/accordion",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Front-end Accordion widget using max-height",
-  "main": "dist/index.js",
+  "main": "dist/accordion.js",
   "scripts": {
     "build": "webpack"
   },
@@ -10,11 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/three11/accordion.git"
   },
-  "keywords": [
-    "Accordion",
-    "Widget",
-    "Front-End"
-  ],
+  "keywords": ["Accordion", "Widget", "Front-End"],
   "authors": [
     {
       "name": "Three 11 Ltd",
