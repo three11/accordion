@@ -38,13 +38,13 @@
   },
   "homepage": "https://github.com/three11/accordion#readme",
   "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.51",
-    "@babel/core": "^7.0.0-beta.51",
-    "@babel/preset-env": "^7.0.0-beta.51",
-    "@babel/preset-stage-2": "^7.0.0-beta.51",
+    "@babel/cli": "^7.0.0-beta.52",
+    "@babel/core": "^7.0.0-beta.52",
+    "@babel/preset-env": "^7.0.0-beta.52",
+    "@babel/preset-stage-2": "^7.0.0-beta.52",
     "babel-loader": "^8.0.0-beta",
     "unminified-webpack-plugin": "^2.0.0",
-    "webpack": "^4.12.0",
+    "webpack": "^4.15.1",
     "webpack-cli": "^3.0.8"
   }
 }
