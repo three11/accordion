@@ -41,6 +41,14 @@ Just download this repository and link the files located in dist folder:
 <script src="path-to-accordion/dist/accordion.min.js"></script>
 ```
 
+or
+
+Include it from Unpkg CDN
+
+```html
+<script src="//unpkg.com/@three11/accordion/dist/accordion.min.js"></script>
+```
+
 ## Usage
 
 First, `import` the module:
