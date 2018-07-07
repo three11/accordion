@@ -21,13 +21,13 @@ Front-end accordion widget using max-height written in vanilla ES2017
 
 ## Install
 
-```console
+```sh
 npm i @three11/accordion
 ```
 
 or
 
-```console
+```sh
 yarn add @three11/accordion
 ```
 
@@ -36,9 +36,9 @@ or
 Just download this repository and link the files located in dist folder:
 
 ```html
-<link rel="stylesheet" href="path-to-accordion/dist/index.css" type="text/css" media="all" />
+<link rel="stylesheet" href="path-to-accordion/dist/accordion.css" type="text/css" />
 
-<script src="path-to-accordion/dist/index.min.js"></script>
+<script src="path-to-accordion/dist/accordion.min.js"></script>
 ```
 
 ## Usage
@@ -61,10 +61,12 @@ const accordion = new Accordion(el, (settings = {}));
 The default settings are:
 
 ```javascript
-headSelector: '[data-title]',   // Selector for the head element
-bodySelector: '[data-content]', // Selector for the body element
-hiddenClass:  'is--hidden',     // Hidden class name
-activeClass:  'is--active',     // Active class name
+{
+	headSelector: '[data-title]',   // Selector for the head element
+	bodySelector: '[data-content]', // Selector for the body element
+	hiddenClass:  'is--hidden',     // Hidden class name
+	activeClass:  'is--active'      // Active class name
+}
 ```
 
 ## License
