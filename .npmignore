@@ -17,9 +17,6 @@ node_modules/
 ehthumbs.db
 Thumbs.db
 
-# Babel
-.babelrc
-
 # EditorConfig
 .editorconfig
 
@@ -33,5 +30,11 @@ Thumbs.db
 # lock files
 yarn.lock
 
+# Prettier
+.prettierrc
+.prettierignore
+
 # Config
+.babelrc
+renovate.json
 webpack.config.js
