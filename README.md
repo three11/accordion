@@ -6,7 +6,6 @@
 [![npm](https://img.shields.io/npm/dt/@three11/accordion.svg)](https://www.npmjs.com/package/@three11/accordion)
 [![npm](https://img.shields.io/npm/v/@three11/accordion.svg)](https://www.npmjs.com/package/@three11/accordion)
 [![Analytics](https://ga-beacon.appspot.com/UA-83446952-1/github.com/three11/accordion/README.md)](https://github.com/three11/accordion/)
-[![Greenkeeper badge](https://badges.greenkeeper.io/three11/accordion.svg)](https://greenkeeper.io/)
 
 # Accordion
 
