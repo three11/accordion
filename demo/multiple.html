@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+		/>
+
+		<title>Accordion Demo</title>
+
+		<style>
+			[data-title] {
+				cursor: pointer;
+			}
+			[data-content] {
+				overflow: hidden;
+				transition: max-height 0.4s;
+			}
+
+			/**
+             * Cosmetics
+             */
+			[data-accordion] {
+				width: 300px;
+				margin: auto;
+			}
+			[data-title] {
+				color: #fff;
+				text-align: center;
+				padding: 0.5rem;
+				background-color: #000;
+			}
+			[data-content] div {
+				padding: 0.5rem;
+				border: 1px solid;
+			}
+		</style>
+	</head>
+	<body>
+		<div data-accordion>
+			<header data-title>Click to toggle</header>
+
+			<section data-content>
+				<div>
+					<p>This is the content</p>
+
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing
+						elit. Placeat tenetur ducimus iste similique dolores
+						harum repudiandae vel non, enim, repellendus natus culpa
+						quaerat perspiciatis, atque, obcaecati ea quas deserunt
+						soluta?
+					</p>
+
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing
+						elit. Placeat tenetur ducimus iste similique dolores
+						harum repudiandae vel non, enim, repellendus natus culpa
+						quaerat perspiciatis, atque, obcaecati ea quas deserunt
+						soluta?
+					</p>
+				</div>
+			</section>
+		</div>
+
+		<div data-accordion>
+			<header data-title>Click to toggle</header>
+
+			<section data-content>
+				<div>
+					<p>This is the content</p>
+
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing
+						elit. Placeat tenetur ducimus iste similique dolores
+						harum repudiandae vel non, enim, repellendus natus culpa
+						quaerat perspiciatis, atque, obcaecati ea quas deserunt
+						soluta?
+					</p>
+
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing
+						elit. Placeat tenetur ducimus iste similique dolores
+						harum repudiandae vel non, enim, repellendus natus culpa
+						quaerat perspiciatis, atque, obcaecati ea quas deserunt
+						soluta?
+					</p>
+				</div>
+			</section>
+		</div>
+
+		<script type="module">
+			import Accordion from '../src/accordion.js';
+
+			const accordions = document.querySelectorAll('[data-accordion]');
+
+			// use this if you want only one open accordion at a time
+			accordions.forEach(accordion => {
+				new Accordion(accordion);
+
+				accordion.head.addEventListener('click', event => {
+					accordions.forEach(acc => {
+						if (accordion !== acc) {
+							acc.close();
+						}
+					});
+				});
+			});
+		</script>
+	</body>
+</html>
