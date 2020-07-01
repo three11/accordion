@@ -3,8 +3,6 @@ export default class Accordion {
 	 * Create a new Accordion instance
 	 *
 	 * @param  {Object} el DOM Element
-	 *
-	 * @return {Object}    Accordion instance
 	 */
 	constructor(el, options = {}) {
 		this.settings = {
