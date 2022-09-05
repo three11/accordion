@@ -42,9 +42,9 @@
 	"homepage": "https://github.com/three11/accordion#readme",
 	"devDependencies": {
 		"@babel/cli": "7.18.10",
-		"@babel/core": "7.18.13",
+		"@babel/core": "7.19.0",
 		"@babel/plugin-transform-modules-umd": "7.18.6",
-		"@babel/preset-env": "7.18.10",
+		"@babel/preset-env": "7.19.0",
 		"babel-minify": "0.5.2"
 	}
 }
