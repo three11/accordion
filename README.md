@@ -1,7 +1,6 @@
 [![GitHub release](https://img.shields.io/github/release/three11/accordion.svg)](https://github.com/three11/accordion/releases/latest)
 [![GitHub issues](https://img.shields.io/github/issues/three11/accordion.svg)](https://github.com/three11/accordion/issues)
 [![GitHub last commit](https://img.shields.io/github/last-commit/three11/accordion.svg)](https://github.com/three11/accordion/commits/master)
-[![Github file size](https://img.shields.io/github/size/three11/accordion/dist/accordion.min.js.svg)](https://github.com/three11/accordion/)
 [![Build Status](https://travis-ci.org/three11/accordion.svg?branch=master)](https://travis-ci.org/three11/accordion)
 [![npm](https://img.shields.io/npm/dt/@three11/accordion.svg)](https://www.npmjs.com/package/@three11/accordion)
 [![npm](https://img.shields.io/npm/v/@three11/accordion.svg)](https://www.npmjs.com/package/@three11/accordion)
@@ -9,7 +8,7 @@
 
 # Accordion
 
-Front-end accordion widget using max-height written in vanilla ES2017
+> Accordion widget using max-height and CSS transitions
 
 ## Install
 
@@ -21,24 +20,6 @@ or
 
 ```sh
 yarn add @three11/accordion
-```
-
-or
-
-Just download this repository and link the files located in dist folder:
-
-```html
-<link rel="stylesheet" href="path-to-accordion/dist/accordion.css" type="text/css" />
-
-<script src="path-to-accordion/dist/accordion.min.js"></script>
-```
-
-or
-
-Include it from Unpkg CDN
-
-```html
-<script src="//unpkg.com/@three11/accordion/dist/accordion.min.js"></script>
 ```
 
 ## Usage
