@@ -9,19 +9,49 @@
 
 		<title>Accordion Demo</title>
 
+		<link rel="stylesheet" href="./dist/accordion.css" />
+
 		<style>
-			[data-title] {
-				cursor: pointer;
+			body {
+				font-family: monospace;
+				font-size: 1rem;
+				line-height: 1.25;
+				text-align: center;
+				margin: 0;
 			}
 
-			[data-content] {
-				overflow: hidden;
-				transition: max-height 0.4s;
+			nav {
+				text-align: center;
 			}
 
-			/**
-             * Cosmetics
-             */
+			nav ul {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 0;
+				margin: 0;
+				list-style: none;
+			}
+
+			nav li {
+				padding: 0 0.5rem;
+			}
+
+			nav h1,
+			nav ul {
+				margin: 1rem 0;
+			}
+
+			nav a {
+				color: inherit;
+				text-decoration: none;
+				display: block;
+			}
+
+			nav .active a {
+				text-decoration: underline;
+			}
+
 			[data-accordion] {
 				width: 300px;
 				margin: auto;
@@ -41,6 +71,15 @@
 		</style>
 	</head>
 	<body>
+		<nav>
+			<h1>Accordion demo</h1>
+
+			<ul>
+				<li class="active"><a href="/">Single</a></li>
+				<li><a href="/multiple.html">Multiple</a></li>
+			</ul>
+		</nav>
+
 		<div data-accordion>
 			<header data-title>Click to toggle</header>
 
@@ -63,10 +102,10 @@
 			</section>
 		</div>
 
-		<script type="module">
-			import Accordion from '../src/accordion.js';
+		<script src="./dist/accordion.umd.js"></script>
 
-			new Accordion(document.querySelector('[data-accordion]'));
+		<script>
+			new window.accordion.Accordion(document.querySelector('[data-accordion]'));
 		</script>
 	</body>
 </html>

@@ -1,23 +1,19 @@
 {
 	"name": "@three11/accordion",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "Front-end Accordion widget using max-height",
-	"main": "dist/accordion.js",
-	"style": "dist/accordion.css",
-	"scripts": {
-		"dist": "babel src/accordion.js --out-file dist/accordion.js",
-		"minify": "babel src/accordion.js --out-file dist/accordion.min.js --presets minify,@babel/env",
-		"build": "npm run dist && npm run minify"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/three11/accordion.git"
-	},
 	"keywords": [
+		"Collapse",
 		"Accordion",
-		"Widget",
-		"Front-End"
+		"Collapsible",
+		"Accordion Widget",
+		"Collapsible Widget"
 	],
+	"homepage": "https://github.com/three11/accordion#readme",
+	"bugs": {
+		"url": "https://github.com/three11/accordion/issues"
+	},
+	"license": "GPL-3.0",
 	"authors": [
 		{
 			"name": "Three 11 Ltd",
@@ -35,16 +31,34 @@
 			"role": "Developer"
 		}
 	],
-	"license": "GPL-3.0",
-	"bugs": {
-		"url": "https://github.com/three11/accordion/issues"
+	"repository": {
+		"type": "git",
+		"url": "github:three11/accordion"
 	},
-	"homepage": "https://github.com/three11/accordion#readme",
+	"scripts": {
+		"lint": "eslint 'src/**/*.ts'",
+		"copy": "cp -r dist demo",
+		"clean": "rm -rf dist && rm -rf demo/dist",
+		"build": "yarn clean && microbundle && yarn copy"
+	},
+	"dependencies": {},
 	"devDependencies": {
-		"@babel/cli": "7.19.3",
-		"@babel/core": "7.20.5",
-		"@babel/plugin-transform-modules-umd": "7.18.6",
-		"@babel/preset-env": "7.20.2",
-		"babel-minify": "0.5.2"
-	}
+		"@typescript-eslint/eslint-plugin": "5.45.0",
+		"@typescript-eslint/parser": "5.45.0",
+		"eslint": "8.28.0",
+		"eslint-config-prettier": "8.5.0",
+		"microbundle": "0.15.1",
+		"typescript": "4.9.3"
+	},
+	"type": "module",
+	"source": "src/accordion.ts",
+	"exports": {
+		"require": "./dist/accordion.cjs",
+		"default": "./dist/accordion.modern.js"
+	},
+	"main": "./dist/accordion.cjs",
+	"style": "./dist/accordion.css",
+	"types": "./dist/accordion.d.ts",
+	"module": "./dist/accordion.module.js",
+	"unpkg": "./dist/accordion.umd.js"
 }

@@ -9,28 +9,61 @@
 
 		<title>Accordion Demo</title>
 
+		<link rel="stylesheet" href="./dist/accordion.css" />
+
 		<style>
-			[data-title] {
-				cursor: pointer;
-			}
-			[data-content] {
-				overflow: hidden;
-				transition: max-height 0.4s;
+			body {
+				font-family: monospace;
+				font-size: 1rem;
+				line-height: 1.25;
+				text-align: center;
+				margin: 0;
 			}
 
-			/**
-             * Cosmetics
-             */
+			nav {
+				text-align: center;
+			}
+
+			nav ul {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 0;
+				margin: 0;
+				list-style: none;
+			}
+
+			nav li {
+				padding: 0 0.5rem;
+			}
+
+			nav h1,
+			nav ul {
+				margin: 1rem 0;
+			}
+
+			nav a {
+				color: inherit;
+				text-decoration: none;
+				display: block;
+			}
+
+			nav .active a {
+				text-decoration: underline;
+			}
+
 			[data-accordion] {
 				width: 300px;
 				margin: auto;
 			}
+
 			[data-title] {
 				color: #fff;
 				text-align: center;
 				padding: 0.5rem;
 				background-color: #000;
 			}
+
 			[data-content] div {
 				padding: 0.5rem;
 				border: 1px solid;
@@ -38,27 +71,14 @@
 		</style>
 	</head>
 	<body>
-		<div data-accordion>
-			<header data-title>Click to toggle</header>
+		<nav>
+			<h1>Accordion demo</h1>
 
-			<section data-content>
-				<div>
-					<p>This is the content</p>
-
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat tenetur ducimus iste similique
-						dolores harum repudiandae vel non, enim, repellendus natus culpa quaerat perspiciatis, atque,
-						obcaecati ea quas deserunt soluta?
-					</p>
-
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat tenetur ducimus iste similique
-						dolores harum repudiandae vel non, enim, repellendus natus culpa quaerat perspiciatis, atque,
-						obcaecati ea quas deserunt soluta?
-					</p>
-				</div>
-			</section>
-		</div>
+			<ul>
+				<li class="active"><a href="/">Single</a></li>
+				<li><a href="/multiple.html">Multiple</a></li>
+			</ul>
+		</nav>
 
 		<div data-accordion>
 			<header data-title>Click to toggle</header>
@@ -81,20 +101,41 @@
 				</div>
 			</section>
 		</div>
+
+		<div data-accordion>
+			<header data-title>Click to toggle</header>
+
+			<section data-content>
+				<div>
+					<p>This is the content</p>
+
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat tenetur ducimus iste similique
+						dolores harum repudiandae vel non, enim, repellendus natus culpa quaerat perspiciatis, atque,
+						obcaecati ea quas deserunt soluta?
+					</p>
+
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat tenetur ducimus iste similique
+						dolores harum repudiandae vel non, enim, repellendus natus culpa quaerat perspiciatis, atque,
+						obcaecati ea quas deserunt soluta?
+					</p>
+				</div>
+			</section>
+		</div>
+
+		<script src="./dist/accordion.umd.js"></script>
 
 		<script type="module">
-			import Accordion from '../src/accordion.js';
+			var instances = Array.from(document.querySelectorAll('[data-accordion]')).map(
+				a => new window.accordion.Accordion(a)
+			);
 
-			const accordions = document.querySelectorAll('[data-accordion]');
-
-			// use this if you want only one open accordion at a time
-			accordions.forEach(accordion => {
-				new Accordion(accordion);
-
-				accordion.head.addEventListener('click', event => {
-					accordions.forEach(acc => {
-						if (accordion !== acc) {
-							acc.close();
+			instances.forEach((i, x) => {
+				i.head.addEventListener('click', () => {
+					instances.forEach((j, y) => {
+						if (x !== y) {
+							j.close();
 						}
 					});
 				});
