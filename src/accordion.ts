@@ -66,16 +66,16 @@ export class Accordion {
 	public toggle(): Accordion {
 		this.height = this.body?.scrollHeight || 0;
 
-		if (this.isOpen) {
-			this.close();
-		} else {
-			this.open();
-		}
+		this.isOpen ? this.close() : this.open();
 
 		return this;
 	}
 
 	public close(): Accordion {
+		if (!this.isOpen) {
+			return this;
+		}
+
 		this.isOpen = false;
 
 		if (this.el) {
@@ -92,6 +92,10 @@ export class Accordion {
 	}
 
 	public open(): Accordion {
+		if (this.isOpen) {
+			return this;
+		}
+
 		this.isOpen = true;
 
 		if (this.el) {
