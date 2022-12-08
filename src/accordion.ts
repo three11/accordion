@@ -72,10 +72,6 @@ export class Accordion {
 	}
 
 	public close(): Accordion {
-		if (!this.isOpen) {
-			return this;
-		}
-
 		this.isOpen = false;
 
 		if (this.el) {
@@ -92,10 +88,6 @@ export class Accordion {
 	}
 
 	public open(): Accordion {
-		if (this.isOpen) {
-			return this;
-		}
-
 		this.isOpen = true;
 
 		if (this.el) {
